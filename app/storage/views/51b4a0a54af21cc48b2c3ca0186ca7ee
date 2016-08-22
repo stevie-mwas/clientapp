@@ -1,0 +1,3 @@
+<?php echo "Welcome to dashbord"; ?>
+
+<a href="<?php echo URL::to('/logout'); ?>">LOGOUT</a>

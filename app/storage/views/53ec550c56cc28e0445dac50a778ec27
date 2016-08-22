@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<title>Xara Financials Client App</title>
+		<?php echo HTML::script('js/bootstrap.min.js'); ?>
+
+		<?php echo HTML::style('css/bootstrap.min.css'); ?>
+
+		<?php echo HTML::style('css/client.css'); ?>
+
+	</head>
+
+	<body class="">
+		<header>
+			<div class="container">
+				<div class="row">
+					<div class="col-xs-offset-1">
+						<h2>Xara Financials</h2>
+					</div>
+				</div>
+			</div>
+		</header>
+
+		<div class="container">
+			<div class="row">
+				<div class="col-md-4 col-md-offset-4 col-sm-6 col-sm-offset-3 col-xs-10 col-xs-offset-1 form-wrapper">
+					<form role="form" method="POST" action="/signup">
+						<div class="form-group">
+							<h3>Create an Account</h3>
+							Already have an Account? <?php echo HTML::link('/login', 'LOGIN'); ?>
+
+						</div>
+						<div class="form-group">
+							<label class="">Company/ Name: </label>
+							<input class="form-control" type="text" name="name" value="" placeholder="Company/ Name">
+						</div>
+						<div class="form-group">
+							<label class="">Email Address: </label>
+							<input class="form-control" type="email" name="email" value="" placeholder="Email Address">
+						</div>
+						<div class="form-group">
+							<label class="">Phone Number: </label>
+							<input class="form-control" type="text" name="phone" value="" placeholder="Phone Number">
+						</div>
+						<div class="form-group">
+							<label class="">Password: </label>
+							<input class="form-control" type="password" name="pword1" value="" placeholder="Password">
+						</div>
+						<div class="form-group">
+							<label class="">Confirm Password: </label>
+							<input class="form-control" type="password" name="pword2" value="" placeholder="Confirm Password">
+						</div>
+						<div class="form-group text-right">
+							<input class="btn btn-primary" type="submit" name="btn-register" value="Create Account">
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+		
+		<footer class="text-center">
+			&copy; Copyright 2016 - Lixnet Technologies	
+		</footer>
+	</body>
+</html>
