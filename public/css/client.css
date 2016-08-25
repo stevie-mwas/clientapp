@@ -1,6 +1,6 @@
 *{
 	color: #555;
-	//font-size: 98%;
+	font-size: 13px;
 }
 
 body{
@@ -9,32 +9,98 @@ body{
 
 header{
 	//height: 50px;
+	width: 100%;
 	background: #e5e5e5;
+	position: fixed;
+	top: 0;
+	z-index: 10;
 	box-shadow: 0px 2px 5px rgba(0,0,0,0.2);
+}
+
+.head{
+	width: 84%;
+	color: #077;
+	font-size: 26px;
+	margin-left: 8%;
+	padding-top: 3px;
+	//border:1px solid #099;
+}
+
+.wrapper-menu, .wrapper{
+	margin-top: 50px;
 }
 
 h2{
 	color: #077;
-	font-size: 26px;
-	margin: 10px 8%;
+	margin-top: 0;
+	font-size: 24px;
+	//width: 70%;
 	//border:1px solid #099;
+	display: inline-block;
 }
 
 h3{
 	border-bottom: 1px solid #e5e5e5;
 	color: #088;
-	font-size: 22px;
+	font-size: 21px;
 	padding-bottom: 5px;
 }
 
-.form-wrapper{
-	box-shadow: 0 0px 7px rgba(0,0,0,0.2);
-	background: #fff;
-	margin-top: 30px;
-	margin-bottom: 10px;
+h3.dash{
+	color: green;
+	font-size: 18px;
 }
+
+p.dash{
+	color: green;
+	font-size: 14px;
+	padding: 7px 0;
+	border-bottom: 1px solid #e5e5e5;
+}
+
+.dropdown{
+	display: inline-block;
+	//border:1px solid #099;
+}
+
+
+.form-wrapper, .menu, .row-wrapper{
+	box-shadow: 0 1px 3px rgba(0,0,0,0.2);
+	background: #fff;
+	margin-top: 15px;
+	margin-bottom: 15px;
+	padding: 10px;
+	text-align: left;
+}
+
+.menu{
+	text-align: center;
+}
+
+.row-wrapper{
+	box-shadow: none;
+	background: none;
+	padding: 5px 0px;
+	margin-bottom: 0;
+	margin-top: 5px;
+}
+
+a{
+	font-size: 94%;
+}
+
+table{
+	background: #fff;
+}
+
 
 footer{
 	/*background: #a5a5a5;*/
 	padding: 10px;
+}
+
+.btn{
+	border-radius: 3px;
+	border:none;
+	box-shadow: 1px 1px 3px rgba(0,0,0,0.3);
 }

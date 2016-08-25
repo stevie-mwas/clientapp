@@ -12,11 +12,11 @@
 */
 
 Route::get('/', function(){
-	return Redirect::to('/signup');
+	return View::make('user.login');
 });
 
 /**
- * ===================================================
+ * ========================================================================
  * LOGIN & SIGNUP PAGES & PROCESS
  * Confide Routes
  */
@@ -34,7 +34,7 @@ Route::get('/logout', 'UsersController@logout');
 
 
 /**
- * HOME PAGE
+ * DASHBOARD HOME PAGE
  */
 Route::get('/user/dashboard', function(){
 	return View::make('home.dashboard');
@@ -45,16 +45,41 @@ Route::get('user/', function(){
 });
 
 Route::when('user/*', 'auth');
-//
 
-// Confide routes
-/*Route::get('users/create', 'UsersController@create');
-Route::post('users', 'UsersController@store');
-Route::get('users/login', 'UsersController@login');
-Route::post('users/login', 'UsersController@doLogin');
-Route::get('users/confirm/{code}', 'UsersController@confirm');
-Route::get('users/forgot_password', 'UsersController@forgotPassword');
-Route::post('users/forgot_password', 'UsersController@doForgotPassword');
-Route::get('users/reset_password/{token}', 'UsersController@resetPassword');
-Route::post('users/reset_password', 'UsersController@doResetPassword');
-Route::get('users/logout', 'UsersController@logout');*/
+/*Route::get('/login', function(){
+	if('auth'){
+		return Redirect::to('user/dashboard');
+	}
+});*/
+
+
+/**
+ * ======================================================================
+ * ROUTES TO URLS BEYOND '/user/*'
+ */
+Route::get('user/orders', 'DashboardController@showOrders');
+Route::get('user/products', 'DashboardController@showProducts');
+Route::get('user/invoices', 'DashboardController@showInvoices');
+Route::get('user/statements', 'DashboardController@showStatements');
+
+Route::get('user/orders/{order_id}', 'DashboardController@viewProducts');
+
+
+/**
+ * ROUTES FOR CREATING A NEW ORDER
+ */
+Route::get('user/new-order', 'DashboardController@showNewOrder');
+Route::post('user/new-order', 'DashboardController@setOrder');
+Route::post('user/new-order/commit', 'DashboardController@saveOrder');
+
+
+/**
+ * ====================================================================
+ * EDITING AND DELETING ORDER ITEMS BEFORE AND AFTER PROCESSING
+ * Edit before processing
+ */
+Route::get('user/orders/edit/{count}', 'DashboardController@editSessionItem');
+Route::post('user/orders/edit/{count}', 'DashboardController@saveEdit');
+
+// Delete item before processing
+Route::get('user/orders/delete/{count}', 'DashboardController@deleteSessionItem');

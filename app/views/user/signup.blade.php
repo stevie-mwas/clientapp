@@ -1,27 +1,6 @@
-<!DOCTYPE html>
-<html lang="en">
-	<head>
-		<meta charset="utf-8">
-		<meta http-equiv="X-UA-Compatible" content="IE=edge">
-		<title>Xara Financials Client App</title>
-		{{ HTML::script('js/bootstrap.min.js') }}
-		{{ HTML::style('css/bootstrap.min.css') }}
-		{{ HTML::style('css/client.css') }}
-	</head>
+@include('plugins.dash_header')
 
-	<body class="">
-		<header>
-			<div class="container">
-				<div class="row">
-					<div class="">
-						<h2>Xara Financials</h2>
-					</div>
-				</div>
-			</div>
-		</header>
-
-		<div class="container">
-			<div class="row">
+			<div class="row wrapper">
 				<div class="col-md-4 col-md-offset-4 col-sm-6 col-sm-offset-3 col-xs-10 col-xs-offset-1 form-wrapper">
 					<div class="form-group">
 						<img src="img/xara.png" alt="Xara Financials" width="70%" height="70px;">
@@ -72,15 +51,10 @@
 				        @endif
 
 						<div class="form-group text-right">
-							<input class="btn btn-primary" type="submit" name="btn-register" value="Create Account">
+							<input class="btn btn-primary btn-sm" type="submit" name="btn-register" value="Create Account">
 						</div>
 					</form>
 				</div>
 			</div>
-		</div>
 		
-		<footer class="text-center">
-			&copy; Copyright 2016 - Lixnet Technologies	
-		</footer>
-	</body>
-</html>
+@include('plugins.footer')
